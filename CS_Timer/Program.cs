@@ -11,22 +11,22 @@ namespace CS_Timer
 {
     class Program
     {
-        static System.Timers.Timer timer;
+        static System.Timers.Timer main_timer;
         static int n = 0;
 
         static void Main(string[] args)
         {
-            timer = new System.Timers.Timer(2000);
+            main_timer = new System.Timers.Timer(2000);
 
             // интервал срабатывания таймера
-            timer.Interval = 1000;
+            main_timer.Interval = 1000;
 
             // указать метод, который будет запускаться по таймеру
-            timer.Elapsed += Timer_Elapsed;
-            timer.Elapsed += Timer_Elapsed2;
+            main_timer.Elapsed += Timer_Elapsed;
+            main_timer.Elapsed += Timer_Elapsed2;
 
             // запуск таймера
-            timer.Start();
+            main_timer.Start();
 
             for (int i = 0; i < 100; i++)
             {
