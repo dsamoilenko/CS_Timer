@@ -13,6 +13,7 @@ namespace CS_Timer
     {
         static System.Timers.Timer main_timer;
         static int n = 0;
+        string test;
 
         static void Main(string[] args)
         {
